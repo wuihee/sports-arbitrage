@@ -38,6 +38,7 @@ app.get("/hasKey", async (req, res) => {
     apiKey = apiKey.toString().trim();
     if (apiKey === "") {
       res.status(SERVER_ERROR).send("API key does not exist.");
+      return;
     }
     res.send("API key exists");
   } catch (err) {
@@ -56,10 +57,7 @@ app.get("/arbitrage/get/:stake", async (req, res) => {
     let opportunities = getArbitrageOpportunities(stake, bestOdds);
     res.json(opportunities);
   } catch (err) {
-    res
-      .type("text")
-      .status(SERVER_ERROR)
-      .send("Request to get odds failed.");
+    res.type("text").status(SERVER_ERROR).send("Request to get odds failed.");
   }
 });
 
