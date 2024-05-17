@@ -1,8 +1,4 @@
 /**
- * Name: Wuihee Yap
- * Date: May 16, 2024
- * Section: CSE 154 AF
- *
  * index.js contains the main frontend code which handles retrieving and saving arbitrage data
  * from the backend. Users can interact with this functionality through buttons on the webpage.
  * Additionally, the code helps to dynamically display arbitrage data and status messages to

@@ -1,8 +1,4 @@
 /**
- * Name: Wuihee Yap
- * Date: May 16, 2024
- * Section: CSE 154 AF
- *
  * app.js is contains the main backend logic and endpoints. It is in charge of retrieving data
  * from the Odds API, processing it and calculating arbitrage opportunities. It then provides
  * endpoitns which the frontend can use to access the arbitrage data and save it. It also handles

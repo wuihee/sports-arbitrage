@@ -1,8 +1,4 @@
 /**
- * Name: Wuihee Yap
- * Date: May 16, 2024
- * Section: CSE 154 AF
- *
  * odds.js module contains the code used for fetching data from the Odds API.
  */
 

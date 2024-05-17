@@ -1,8 +1,4 @@
 /**
- * Name: Wuihee Yap
- * Date: May 16, 2024
- * Section: CSE 154 AF
- *
  * arbitrage.js module handles the logic for finding arbitrage opportunities in the data returned
  * from the Odds API.
  */
