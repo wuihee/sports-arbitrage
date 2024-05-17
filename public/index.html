@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+  ***
+  Name: Wuihee Yap
+  Date: May 16 2024
+  Section: CSE 154 AF
+
+  index.html provides the structure of the web application. It contains an article introducing
+  sprots arbitrage and some input controls that allow the user to display arbitrage data and
+  save the data.
+
+  Warning icons created by Good Ware - Flaticon
+  Correct icons created by Pixel perfect - Flaticon
+  Delete icons created by Pixel perfect - Flaticon
+  ***
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+    <title>C4</title>
+  </head>
+  <body>
+    <header>
+      <h1>Sports Arbitrage Finder</h1>
+      <h2>What is Sports Arbitrage?</h2>
+      <p>
+        *Sports arbitrage is a strategy that involves placing bets on all possible outcomes of a
+        sporting event to guarantee a profit regardless of the result.
+      </p>
+      <p>
+        These opportunities present themselves because different bookmakers offer different odds
+        for the same sporting event. And we can take advantage of this discrepancy to make free
+        money.
+      </p>
+      <h3>Example</h3>
+      <p>
+        Let's say there is a tennis match between Player A and Player B.
+      </p>
+      <ul>
+        <li>Bookmaker 1 offers odds of 2.10 on Player A.</li>
+        <li>Bookmaker 2 offers odds of 2.10 on Player B.</li>
+      </ul>
+      <p>
+        By placing a bet of $100 on Player A with Bookmaker 1 and a bet of $100 on Player B with
+        Bookmaker 2, you are guaranteed a return of $210 no matter who wins, which gives you a
+        profit of $10 on your $200 total bet.
+      </p>
+      <h2>Limitations</h2>
+      <p>
+        However, it is not easy to arb. Betting odds move very quickly making it hard to place
+        bets consistently. In addition, bookmakers hate arbing and will quickly ban you when
+        they realize what you are doing.
+      </p>
+      <h2>How Does This Work?</h2>
+      <p>
+        Real-time data on sporting odds can be retrieved from the
+        <a href="https://the-odds-api.com">Odds API</a>. For each sporting event, we search for
+        arbitrage opportunities by finding the <em>maximum odds</em> offered by all available
+        bookmakers. We can calculate the <em>arbitrage percentage</em> by taking the sum of the
+        reciprocal of the odds and if this percentage is less than 1, we have an arbitrage.
+      </p>
+      <p>
+        In the text box below, enter your <em>stake</em>, or amount of money you want to bet.
+        I will help you to calculate how much money you could possibly make from current sporting
+        events.
+      </p>
+    </header>
+    <section>
+      <input type="text" placeholder="Enter API Key" id="api-input">
+      <button id="api-btn">Validate Key</button>
+    </section>
+    <section>
+      <input type="text" placeholder="Enter stake" id="stake-input">
+      <button id="arb-btn" disabled>Get Arbitrage</button>
+      <button id="save-btn" disabled>Save Data</button>
+      <section id="message-container"></section>
+      <section id="display"></section>
+    </section>
+  </body>
+</html>

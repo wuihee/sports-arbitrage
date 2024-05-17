@@ -1,0 +1,208 @@
+/*
+  Name: Wuihee Yap
+  Date: May 16 2024
+  Section: CSE 154 AF
+
+  styles.css includes the styling for the webpage. The look of the overall webpage is kept clean
+  and simple. The remaining styles help to display the game cards which show arbitrage information
+  and the status messages.
+*/
+
+body {
+  background-color: #f4f4f9;
+  color: #0f0f0f;
+  font-family: "Nunito", sans-serif;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2%;
+}
+
+@media (max-width: 2000px) {
+  body {
+    width: 80%;
+  }
+
+  header p {
+    width: 100%;
+  }
+}
+
+header p {
+  width: 50%;
+}
+
+section {
+  margin-top: 10px;
+}
+
+button,
+input {
+  font-family: "Nunito", sans-serif;
+}
+
+input {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+  width: 200px;
+}
+
+input:focus {
+  border-color: #007bff;
+}
+
+button {
+  width: 120px;
+  padding: 8px 12px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:disabled {
+  background-color: #ccc;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+
+#message-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #333;
+  font-size: 16px;
+  position: relative;
+  width: 300px;
+}
+
+.message.success {
+  background-color: #d4f4d7;
+  border: 1px solid #9fefab;
+}
+
+.message.warning {
+  background-color: #fff4d6;
+  border: 1px solid #ffe5a6;
+}
+
+.message.error {
+  background-color: #fcdada;
+  border: 1px solid #f9a6a6;
+}
+
+.message .icon {
+  margin-right: 10px;
+}
+
+.message .close {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.message img {
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 6px;
+}
+
+#display {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  margin: 10px;
+}
+
+.sport {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.date {
+  font-size: 1em;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.teams {
+  margin-bottom: 20px;
+}
+
+.home,
+.away {
+  font-size: 1.2em;
+}
+
+.vs {
+  font-size: 1em;
+  color: #999;
+}
+
+.odds {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.odds-block {
+  text-align: center;
+}
+
+.odds-label {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.odds-value {
+  font-size: 1.3em;
+  color: #333;
+}
+
+.bookmaker {
+  font-size: 0.9em;
+  color: #777;
+}
+
+.stake {
+  font-size: 0.9em;
+  color: #333;
+}
+
+.arbitrage {
+  margin-top: 20px;
+  font-size: 1em;
+  color: #333;
+}
